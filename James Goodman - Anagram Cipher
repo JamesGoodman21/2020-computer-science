@@ -1,0 +1,27 @@
+import itertools
+
+str1 = ""
+
+things = int(input("How many words are in your phrase?"))
+
+print("Ok, there are ",things, "things...")
+
+words_Ive_entered = 0
+
+l=[]
+while things > words_Ive_entered:
+  print("Give me a word.")
+  word = str(input())
+  char_in_word = list(word)
+  print(char_in_word)
+  words_Ive_entered = words_Ive_entered+1
+  print("You have entered", words_Ive_entered, "words.")
+  l.append(word)
+  possibilities = list (itertools.permutations(word, r=None))
+  for elem in possibilities:
+    newL = elem
+    print (str1.join(newL))
+
+#new_string=str1.join(l)
+#print(new_string)
+
